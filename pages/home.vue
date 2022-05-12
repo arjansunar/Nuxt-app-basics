@@ -8,6 +8,8 @@
       <p v-else-if="$fetchState.error">An error occurred :(</p>
       <div v-else>
         <h1>Nuxt Mountains</h1>
+        <CoolButton @clicked="clicked" />
+
         <ul>
           <li v-for="(mountain, i) of mountains" :key="i">
             <h2>{{ mountain.title }}</h2>
@@ -22,7 +24,6 @@
             </div>
           </li>
         </ul>
-        <button @click="$fetch">Refresh</button>
       </div>
     </div>
   </div>
@@ -35,6 +36,7 @@ export default {
   data() {
     return {
       mountains: [],
+      title: 'Mountains | home',
     }
   },
   // does the api requests to fetch external resources
@@ -56,6 +58,11 @@ export default {
         },
       ],
     }
+  },
+  methods: {
+    clicked() {
+      alert('Button clicked')
+    },
   },
 }
 </script>

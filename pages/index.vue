@@ -1,5 +1,8 @@
 <template>
-  <Tutorial />
+  <div class="">
+    <div class="">index page</div>
+    <nuxt-link to="/home">home</nuxt-link>
+  </div>
 </template>
 
 <script>

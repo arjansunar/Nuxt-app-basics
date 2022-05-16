@@ -12,7 +12,10 @@
 
         <ul>
           <li v-for="(mountain, i) of mountains" :key="i">
-            <NuxtLink :to="`${mountain.title}`">
+            <NuxtLink
+              :to="`/home/${mountain.title}?path=${mountain.path}`"
+              keep-alive
+            >
               <h2 class="text-h5">{{ mountain.title }}</h2>
               <span>{{ mountain.height }}</span>
               <div class="">

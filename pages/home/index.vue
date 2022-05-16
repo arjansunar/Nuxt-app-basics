@@ -8,9 +8,8 @@
       <p v-else-if="$fetchState.error">An error occurred :(</p>
       <div v-else>
         <h1 class="text-overline">Nuxt Mountains</h1>
-        <CoolButton @clicked="clicked" />
 
-        <ul>
+        <ul class="gallery-grid">
           <li v-for="(mountain, i) of mountains" :key="i">
             <NuxtLink
               :to="`/home/${mountain.title}?path=${mountain.path}`"
@@ -76,5 +75,11 @@ export default {
 img {
   object-fit: cover;
   aspect-ratio: 16/9;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
 }
 </style>

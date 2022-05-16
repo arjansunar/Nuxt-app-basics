@@ -12,16 +12,18 @@
 
         <ul>
           <li v-for="(mountain, i) of mountains" :key="i">
-            <h2>{{ mountain.title }}</h2>
-            <span>{{ mountain.height }}</span>
-            <div class="">
-              <img
-                :src="mountain.image"
-                :alt="mountain.title"
-                height="400"
-                width="400"
-              />
-            </div>
+            <NuxtLink :to="`${mountain.title}`">
+              <h2 class="text-h5">{{ mountain.title }}</h2>
+              <span>{{ mountain.height }}</span>
+              <div class="">
+                <img
+                  :src="mountain.image"
+                  :alt="mountain.title"
+                  height="400"
+                  width="400"
+                />
+              </div>
+            </NuxtLink>
           </li>
         </ul>
       </div>

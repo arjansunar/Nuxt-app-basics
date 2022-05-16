@@ -1,13 +1,13 @@
 <template>
-  <div class="">
-    <div>home</div>
+  <v-container class="d-flex flex-column align-center justify-center">
+    <div class="text-h1">home</div>
     <nuxt-link to="/">index</nuxt-link>
 
     <div>
       <p v-if="$fetchState.pending">Fetching mountains...</p>
       <p v-else-if="$fetchState.error">An error occurred :(</p>
       <div v-else>
-        <h1>Nuxt Mountains</h1>
+        <h1 class="text-overline">Nuxt Mountains</h1>
         <CoolButton @clicked="clicked" />
 
         <ul>
@@ -26,7 +26,7 @@
         </ul>
       </div>
     </div>
-  </div>
+  </v-container>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-  <button @click="clicked">cool button</button>
+  <v-btn @click="clicked">cool button</v-btn>
 </template>
 
 <script>
